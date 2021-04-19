@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tables Exercise</h1>
+    <script>
+        let multiplier = 0;
+        let placeHoldArr = [];
+
+        // function to stringify arr into output
+        let outPutToString = function (arr) {
+            let tempStr = '';
+            for (let i = 0; i < arr.length; i++) {
+ 
+                // console.log(arr[i]);
+                // console.log(tempStr);
+                tempStr = tempStr + '  ' + arr[i]
+            }
+            return tempStr;
+        }
+        
+
+
+
+
+        // for loop to increment multiplier, then go into 2nd for loop 
+        //      to multiply 1-10 by multiplier, add to arr
+        for (let j = 1; j <= 10; j++) {
+            multiplier = j;
+            // console.log("multiplier is: " + multiplier)
+            for (let i = 1; i <= 10; i++) {
+                // console.log("placeholder index in i is: " + placeHoldArr[i-1])
+                placeHoldArr[i - 1] = i * multiplier;
+        }
+
+        
+        let outPut = outPutToString(placeHoldArr)
+        console.log("multiplication table for " + j + " is: " + outPut)
+        
+        }
+
+        
+        
+    </script>
+</body>
+</html>
