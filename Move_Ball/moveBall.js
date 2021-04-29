@@ -19,12 +19,12 @@ function moveBall(ball) {
     let windowY = body.clientHeight;
 
     // if ball is greater than window width/height, or less than zero, reverse velocity
-    if (positionX >= windowX || positionX < 0) {
+    if (positionX >= windowX - ball.clientWidth || positionX < 0) {
     ball.style.backgroundColor = "purple";
     velocityX = -velocityX
     }
 
-    if (positionY > windowY || positionY < 0) {
+    if (positionY > windowY - ball.clientHeight || positionY < 0) {
     ball.style.backgroundColor = "blue";
     velocityY = -velocityY
     }
